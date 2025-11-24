@@ -1,5 +1,3 @@
-"use client";
-
 import { AbrasiveMask } from "@/src/components/abrasive-mask";
 import { CTASection } from "@/src/components/sections/cta.section";
 import { ExperienceSection } from "@/src/components/sections/experience.section";
