@@ -4,15 +4,18 @@ import { RoundedMarquee } from "../shared/rounded-marquee.shared";
 
 export function HeroSection() {
   return (
-    <div className="flex min-h-screen  relative w-full items-center  justify-center bg-background flex-col max-sm:overflow-x-hidden max-sm:min-h-[calc(100vh-70px)]">
-      <div className="z-10 max-sm:px-mg">
+    <section 
+      className="flex min-h-screen  relative w-full items-center  justify-center bg-background flex-col max-sm:overflow-x-hidden max-sm:min-h-[calc(100vh-70px)]"
+      aria-label="Hero section"
+    >
+      <header className="z-10 max-sm:px-mg">
         <h1 className="font-mona-sans-exp font-bold text-7xl max-sm:text-7xl">
           Software Engineer
         </h1>
-        <h2 className="font-mona-sans">
+        <p className="font-mona-sans text-lg">
           Building exceptional user experiences for the passion
-        </h2>
-      </div>
+        </p>
+      </header>
 
       <div
         className="top-32 left-20  absolute size-[400px] overflow-hidden rounded-[70px] max-sm:size-full max-sm:top-[unset] max-sm:bottom-mg max-sm:left-0"
@@ -24,7 +27,7 @@ export function HeroSection() {
           src="/media/ese-profile-2.png"
           height={200}
           width={200}
-          alt="WTF-image"
+          alt="Ese Curtis - Software Engineer and Fullstack Developer profile photo"
           className="size-full object-cover"
         />
       </div>
@@ -39,7 +42,7 @@ export function HeroSection() {
           src="/media/WTF.jpg"
           height={200}
           width={200}
-          alt="WTF-image"
+          alt="Ese Curtis portfolio background image"
           className="size-full"
         />
       </div>
@@ -50,7 +53,7 @@ export function HeroSection() {
               src="/media/ese-profile-2.png"
               height={200}
               width={200}
-              alt="WTF-image"
+              alt="Ese Curtis profile photo - Software Engineer"
               className="size-full group-hover:rotate-30 group-hover:scale-[1.5] group-hover:opacity-0  transition-all absolute top-0 left-0 rounded-full overflow-hidden"
             />
 
@@ -58,14 +61,14 @@ export function HeroSection() {
               src="/media/WTF.jpg"
               height={200}
               width={200}
-              alt="WTF-image"
+              alt="Ese Curtis portfolio interactive element"
               className="size-full opacity-0 group-hover:opacity-100 transition-all absolute top-0 left-0 rounded-full overflow-hidden"
             />
-          <div className="invert animate-[spin_14s_linear_infinite] scale-[1.3]">
+          <div className="invert animate-[spin_14s_linear_infinite] scale-[1.3]" aria-hidden="true">
             <RoundedMarquee />
           </div>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
