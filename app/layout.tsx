@@ -24,8 +24,6 @@ export const metadata: Metadata = {
   description: "Building exceptional user experiences for the passion"
 };
 
-export const viewport = undefined;
-
 export default function RootLayout({
   children
 }: Readonly<{
