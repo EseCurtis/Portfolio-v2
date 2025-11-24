@@ -1,9 +1,10 @@
 export function FooterSection() {
   return (
-    <div className="bg-red-500 p-3 z-10 relative">
-      <div className="flex items-center gap-2">
-        <p>&copy; Ese Curtis</p>
-        <b>2020 - 2025</b>
+    <div className="bg-gray-700 p-3  relative w-full px-mg mt-[70px]">
+      <div className="flex items-center z-10 relative justify-between gap-2">
+        <span>
+          &copy; Ese Curtis • <b>2022 - {new Date().getFullYear()}</b>
+        </span>
       </div>
     </div>
   );

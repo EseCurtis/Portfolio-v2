@@ -53,7 +53,7 @@ export const myExperience = [
     {
         title: "BizConnect24",
         role: "Fullstack Engineer",
-        duration: "2025 - Present",
+        duration: "2025",
         description: `
             Worked mainly on the frontend and web optimizations,<br/>
             Fixing ui bugs and errors.<br/>
@@ -93,3 +93,17 @@ export const myProjects = [
         liveUrl: "https://ventt-io.netlify.app"
     },
 ]
+
+
+
+export const contactsUrl = {
+    email: "mailto:curtisese52@gmail.com",
+    instagram: "https://www.instagram.com/ese.szn/",
+    twitter: "https://x.com/CurtisEse"
+}
+
+
+export const quickLinks = {
+    myBlogUrl: "https://eseszn.medium.com",
+    aboutMeUrl: "https://eseszn.medium.com/a-story-about-me-b5093c0b300a"
+}
