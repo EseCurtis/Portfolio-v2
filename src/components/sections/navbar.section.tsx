@@ -7,14 +7,14 @@ import Link from "next/link";
 
 export function NavbarSection() {
   return (
-    <nav className="top-0 left-0 z-11 fixed  w-full h-[70px] flex gap-2 justify-between items-center mg-x">
-      <div>
+    <nav className="fixed left-0 top-0 z-11 flex w-full flex-wrap items-center justify-between gap-4 px-4 py-4 sm:h-[70px] sm:flex-nowrap sm:px-6 lg:mg-x">
+      <div className="flex w-full items-center justify-between sm:w-auto">
         <h1 className="text-3xl font-extrabold font-mona-sans-exp">
           Ese Curtis
         </h1>
       </div>
-      <div className="flex">
-        <div className=" gap-7 flex items-center text-sm font-mona-sans-exp">
+      <div className="flex w-full flex-wrap items-center justify-center gap-4 text-sm font-mona-sans-exp sm:w-auto sm:justify-end sm:gap-7">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:flex-nowrap sm:gap-7">
           <Link
             href={quickLinks.aboutMeUrl}
             target="_blank"
@@ -31,11 +31,9 @@ export function NavbarSection() {
           </Link>
         </div>
 
-        <div className="py-7 h-full mx-5">
-          <span>•</span>
-        </div>
+        <span className="hidden text-white/80 sm:inline">•</span>
 
-        <div className=" gap-7 flex items-center">
+        <div className="flex items-center justify-center gap-5 sm:gap-7">
           <Link
             href={contactsUrl.email}
             target="_blank"
