@@ -7,9 +7,9 @@ import Link from "next/link";
 
 export function NavbarSection() {
   return (
-    <nav className="fixed left-0 top-0 z-11 flex w-full flex-wrap items-center justify-between gap-4 px-4 py-4 sm:h-[70px] sm:flex-nowrap sm:px-6 lg:mg-x">
+    <nav className="fixed left-0 top-0 z-11 flex w-full flex-wrap items-center justify-between gap-4 px-4 py-4 sm:h-[70px] sm:flex-nowrap sm:px-6 lg:mg-x max-sm:pt-mg">
       <div className="flex w-full items-center justify-between sm:w-auto">
-        <h1 className="text-3xl font-extrabold font-mona-sans-exp">
+        <h1 className="text-3xl font-extrabold font-mona-sans-exp max-sm:text-center max-sm:w-full">
           Ese Curtis
         </h1>
       </div>

@@ -99,7 +99,8 @@ export const myProjects = [
 export const contactsUrl = {
     email: "mailto:curtisese52@gmail.com",
     instagram: "https://www.instagram.com/ese.szn/",
-    twitter: "https://x.com/CurtisEse"
+    twitter: "https://x.com/CurtisEse",
+    phone: "tel:+2348136046862"
 }
 
 

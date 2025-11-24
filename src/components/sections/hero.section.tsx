@@ -4,9 +4,9 @@ import { RoundedMarquee } from "../shared/rounded-marquee.shared";
 
 export function HeroSection() {
   return (
-    <div className="flex min-h-screen relative w-full items-center  justify-center bg-background flex-col">
-      <div className="z-10">
-        <h1 className="font-mona-sans-exp font-bold text-7xl">
+    <div className="flex min-h-screen  relative w-full items-center  justify-center bg-background flex-col max-sm:overflow-x-hidden max-sm:min-h-[calc(100vh-70px)]">
+      <div className="z-10 max-sm:px-mg">
+        <h1 className="font-mona-sans-exp font-bold text-7xl max-sm:text-7xl">
           Software Engineer
         </h1>
         <h2 className="font-mona-sans">
@@ -15,7 +15,7 @@ export function HeroSection() {
       </div>
 
       <div
-        className="top-32 left-20  absolute size-[400px] overflow-hidden rounded-[70px]"
+        className="top-32 left-20  absolute size-[400px] overflow-hidden rounded-[70px] max-sm:size-full max-sm:top-[unset] max-sm:bottom-mg max-sm:left-0"
         style={{
           mask: "linear-gradient(#000 10%, transparent 90%)"
         }}
@@ -25,12 +25,12 @@ export function HeroSection() {
           height={200}
           width={200}
           alt="WTF-image"
-          className="size-full"
+          className="size-full object-cover"
         />
       </div>
 
       <div
-        className="-bottom-32 right-10 opacity-70 absolute size-[500px] overflow-hidden rounded-[70px]"
+        className="-bottom-32 right-10 opacity-70 absolute size-[500px] overflow-hidden rounded-[70px]  max-sm:size-[100px]"
         style={{
           mask: "linear-gradient(#000 10%, transparent 90%)"
         }}
@@ -44,8 +44,8 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="absolute bottom-[120px] z-10 left-[120px] bg-gray-600 rounded-full">
-        <Link href="#" className=" relative overflow-hidden  size-[120px] group">
+      <div className="absolute bottom-[120px] z-10 left-[120px] bg-gray-600 rounded-full  max-sm:left-mg max-sm:bottom-0  max-sm:scale-[0.7]">
+        <Link href="#" className=" relative  size-[120px] group ">
           <Image
               src="/media/ese-profile-2.png"
               height={200}

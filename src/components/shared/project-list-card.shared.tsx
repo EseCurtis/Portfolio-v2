@@ -22,7 +22,7 @@ export function ProjectListCard({
   liveUrl
 }: Props) {
   return (
-    <div className=" relative z-10 aspect-square col-span-1">
+    <div className=" relative z-10 aspect-square col-span-1 max-sm:aspect-auto">
       <div className="z-10 relative flex flex-col justify-end h-full gap-3">
         <div className="bg-gray-600/50 z-10 h-full relative rounded-2xl overflow-hidden border border-[#ffffff00]">
           {/* <AbrasiveMask position="absolute" /> */}

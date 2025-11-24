@@ -5,6 +5,11 @@
   --foreground: #ededed;
 
   --mg-x: 24px;
+
+}
+
+@theme {
+  --breakpoint-sm: 640px;
 }
 
 @theme inline {
@@ -13,11 +18,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-mona-sans: var(--font-mona-sans);
-  --spacing-mg: 50px
-
+  --spacing-mg: 50px;
+  --spacing-05-mg: 25px;
 }
-
-
 
 @utility font-mona-sans-exp {
   font-family: var(--font-mona-sans);
@@ -31,18 +34,21 @@
 @utility mg-x {
   padding-inline: 50px;
 }
-html, body {
+
+html,
+body {
   overscroll-behavior: contain;
-  -webkit-overflow-scrolling:touch;
+  -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
-  -webkit-overflow-scrolling: auto; /* disables momentum scroll bouncing */
-  
+  -webkit-overflow-scrolling: auto;
+  /* disables momentum scroll bouncing */
+
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  
+
 
 }
