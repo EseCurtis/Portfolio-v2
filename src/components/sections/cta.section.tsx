@@ -2,7 +2,7 @@ import { Instagram, Mail, Phone, Twitter } from "lucide-react";
 
 export function CTASection() {
   return (
-    <div className="z-10  w-full flex flex-col items-center justify-center py-mg">
+    <div className="z-10  w-full flex flex-col items-center justify-center py-[20vh]">
       <h3 className="text-4xl font-mona-sans-exp font-bold text-center">
         Do You Have Any Ideas?
       </h3>
