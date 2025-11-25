@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { RoundedMarquee } from "../shared/rounded-marquee.shared";
+import { HeroBackdropArts } from "../shared/hero-backdrop-arts";
+import { HeroCircularFollow } from "../shared/hero-circular-follow.shared";
+import { HeroInfoAbout } from "../shared/hero-info-about.shared";
 
 export function HeroSection() {
   return (
-    <section 
+    <section
       className="flex min-h-screen  relative w-full items-center  justify-center bg-background flex-col max-sm:overflow-x-hidden max-sm:min-h-[calc(100vh-70px)]"
       aria-label="Hero section"
     >
@@ -17,58 +17,9 @@ export function HeroSection() {
         </p>
       </header>
 
-      <div
-        className="top-32 left-20  absolute size-[400px] overflow-hidden rounded-[70px] max-sm:size-full max-sm:top-[unset] max-sm:bottom-mg max-sm:left-0"
-        style={{
-          mask: "linear-gradient(#000 10%, transparent 90%)"
-        }}
-      >
-        <Image
-          src="/media/ese-profile-2.png"
-          height={200}
-          width={200}
-          alt="Ese Curtis - Software Engineer and Fullstack Developer profile photo"
-          className="size-full object-cover"
-        />
-      </div>
-
-      <div
-        className="-bottom-32 right-10 opacity-70 absolute size-[500px] overflow-hidden rounded-[70px]  max-sm:size-[100px]"
-        style={{
-          mask: "linear-gradient(#000 10%, transparent 90%)"
-        }}
-      >
-        <Image
-          src="/media/WTF.jpg"
-          height={200}
-          width={200}
-          alt="Ese Curtis portfolio background image"
-          className="size-full"
-        />
-      </div>
-
-      <div className="absolute bottom-[120px] z-10 left-[120px] bg-gray-600 rounded-full  max-sm:left-mg max-sm:bottom-0  max-sm:scale-[0.7]">
-        <Link href="#" className=" relative  size-[120px] group ">
-          <Image
-              src="/media/ese-profile-2.png"
-              height={200}
-              width={200}
-              alt="Ese Curtis profile photo - Software Engineer"
-              className="size-full group-hover:rotate-30 group-hover:scale-[1.5] group-hover:opacity-0  transition-all absolute top-0 left-0 rounded-full overflow-hidden"
-            />
-
-            <Image
-              src="/media/WTF.jpg"
-              height={200}
-              width={200}
-              alt="Ese Curtis portfolio interactive element"
-              className="size-full opacity-0 group-hover:opacity-100 transition-all absolute top-0 left-0 rounded-full overflow-hidden"
-            />
-          <div className="invert animate-[spin_14s_linear_infinite] scale-[1.3]" aria-hidden="true">
-            <RoundedMarquee />
-          </div>
-        </Link>
-      </div>
+      <HeroInfoAbout />
+      <HeroBackdropArts />
+      <HeroCircularFollow />
     </section>
   );
 }
