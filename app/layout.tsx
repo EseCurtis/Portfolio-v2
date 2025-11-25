@@ -111,7 +111,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
-  category: "Portfolio"
+  category: "Portfolio",
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/media/ese-profile-2.png", sizes: "32x32", type: "image/png" },
+      { url: "/media/ese-profile-2.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: [
+      { url: "/media/ese-profile-2.png", sizes: "180x180", type: "image/png" }
+    ]
+  }
 };
 
 export default function RootLayout({
