@@ -17,7 +17,7 @@ export function HeroCircularFollow() {
         scale: 1,
         opacity: 1
       }}
-      className="absolute bottom-[120px] z-10 left-[120px] bg-gray-600 rounded-full  max-sm:left-mg max-sm:bottom-0  max-sm:scale-[0.7]"
+      className="absolute bottom-[120px] z-10 left-[120px] bg-gray-600 rounded-full  max-sm:left-3 max-sm:bottom-0  max-sm:scale-[0.7]"
     >
       <Link
         href={contactsUrl.twitter}
