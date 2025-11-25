@@ -4,7 +4,7 @@ import { contactsUrl } from "@/src/utils/shared/constants.util.shared";
 import { FMotion } from "@/src/utils/shared/framer-motion.util.shared";
 import Image from "next/image";
 import Link from "next/link";
-import { RoundedMarquee } from "./rounded-marquee.shared";
+import { RoundedMarquee } from "../common/rounded-marquee.shared";
 
 export function HeroCircularFollow() {
   return (
@@ -42,7 +42,7 @@ export function HeroCircularFollow() {
           className="invert animate-[spin_14s_linear_infinite] scale-[1.3]"
           aria-hidden="true"
         >
-          <RoundedMarquee />
+          <RoundedMarquee  text={"Ese.szn • Follow Me On Twitter(X)"}/>
         </div>
       </Link>
     </FMotion.div>

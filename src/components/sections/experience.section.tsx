@@ -3,8 +3,8 @@ import {
   myExperience,
   mySkills
 } from "@/src/utils/shared/constants.util.shared";
-import { AbrasiveMask } from "../abrasive-mask";
-import { ExperienceListItem } from "../shared/experience-list-item.shared";
+import { AbrasiveMask } from "../shared/common/abrasive-mask";
+import { ExperienceListItem } from "../shared/experience-section/experience-list-item.shared";
 
 function Experiences() {
   return (

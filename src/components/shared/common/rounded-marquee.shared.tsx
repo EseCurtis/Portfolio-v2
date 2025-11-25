@@ -1,7 +1,7 @@
 "use client";
 import ReactCurvedText from "react-curved-text";
 
-export function RoundedMarquee() {
+export function RoundedMarquee({ text }: { text: string }) {
   const size = 120;
   return (
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -15,7 +15,7 @@ export function RoundedMarquee() {
       ry={size / 2}
       startOffset={100}
       reversed={false}
-      text="Ese.szn • Follow Me On Twitter(X)"
+      text={text}
       textProps={{
         style: { fontSize: 14, color: "#ffffff" },
         color: "#fff",

@@ -50,6 +50,18 @@ export const myExperience = [
             Worked on and tested automation services to handle customized user flows, improving efficiency and reliability.
         `
     },
+
+    {
+        title: "Get MUVN",
+        role: "Frontend Mobile Engineer",
+        duration: "2024",
+        description: `
+        Built and maintained Get MUVN React Native app (iOS/Android) with fast, reusable UI components and Context API state management.<br/>
+        Integrated APIs & services (auth, push notifications) with offline support and secure data sync.<br/>
+        Implemented CI/CD (Fastlane/Bitrise), automated testing (Jest/Detox), and Git workflows.<br/>
+        Collaborated in Agile team to deliver high-quality features rapidly.
+    `
+    },
     {
         title: "BizConnect24",
         role: "Fullstack Engineer",

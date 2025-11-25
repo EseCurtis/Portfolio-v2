@@ -1,5 +1,5 @@
 import { myProjects } from "@/src/utils/shared/constants.util.shared";
-import { ProjectListCard } from "../shared/project-list-card.shared";
+import { ProjectListCard } from "../shared/project-section/project-list-card.shared";
 
 export function ProjectsSection() {
   return (

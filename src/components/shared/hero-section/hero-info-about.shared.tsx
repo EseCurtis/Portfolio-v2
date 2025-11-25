@@ -17,7 +17,7 @@ export function HeroInfoAbout() {
         delay: 0.4,
       
       }}
-      className="flex justify-end max-sm:hidden overflow-clip bottom-32 right-20 absolute p-3 border-r max-w-[400px] z-10"
+      className="flex justify-end overflow-clip bottom-32 right-20 absolute p-3 border-r max-w-[400px] z-10 max-sm:right-05-mg max-sm:bottom-40 max-sm:max-w-[70vw]"
     >
       <p>
         4+ Years of experience. Specialized in building products, while ensuring

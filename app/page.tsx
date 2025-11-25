@@ -1,10 +1,10 @@
-import { AbrasiveMask } from "@/src/components/abrasive-mask";
 import { CTASection } from "@/src/components/sections/cta.section";
 import { ExperienceSection } from "@/src/components/sections/experience.section";
 import { FooterSection } from "@/src/components/sections/footer.section";
 import { HeroSection } from "@/src/components/sections/hero.section";
 import { NavbarSection } from "@/src/components/sections/navbar.section";
 import { ProjectsSection } from "@/src/components/sections/projects.section";
+import { AbrasiveMask } from "@/src/components/shared/common/abrasive-mask";
 import { myProjects } from "@/src/utils/shared/constants.util.shared";
 import ReactLenis from "lenis/react";
 

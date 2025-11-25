@@ -38,7 +38,7 @@ export function HeroBackdropArts() {
           opacity: 1,
           y: 0
         }}
-        className="-bottom-32 right-10 opacity-70 absolute size-[500px] overflow-hidden rounded-[70px]  max-sm:size-[100px]"
+        className="-bottom-32 right-10 opacity-70 absolute size-[500px] overflow-hidden rounded-[70px] max-sm:bottom-0  max-sm:size-[100px]"
         style={{
           mask: "linear-gradient(#000 10%, transparent 90%)"
         }}
