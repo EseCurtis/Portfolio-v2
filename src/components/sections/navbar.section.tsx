@@ -33,7 +33,7 @@ export function NavbarSection() {
           </Link>
 
           <Link
-            href={quickLinks.myBlogUrl}
+            href={contactsUrl.github}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
