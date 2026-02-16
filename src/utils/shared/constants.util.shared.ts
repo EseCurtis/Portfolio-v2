@@ -76,6 +76,51 @@ export const myExperience = [
 
 export const myProjects = [
     {
+        title: "Get MUVN",
+        tagLine: "Web Development",
+        description: "A modern web application built with cutting-edge technologies.",
+        coverImageUrl: "/media/agency-projects/muvn.png",
+        blogPostUrl: "https://getmuvn.app",
+        githubUrl: "https://getmuvn.app",
+        liveUrl: "https://getmuvn.app"
+    },
+    {
+        title: "New Wine Place",
+        tagLine: "Web Design & Web Development",
+        description: "A beautifully designed website showcasing modern web design and development practices.",
+        coverImageUrl: "/media/agency-projects/new-wine-place.png",
+        blogPostUrl: "https://thenewwineplace.vercel.app",
+        githubUrl: "https://thenewwineplace.vercel.app",
+        liveUrl: "https://thenewwineplace.vercel.app"
+    },
+    {
+        title: "HOZ Beauty",
+        tagLine: "Web Design & Development",
+        description: "An elegant beauty brand website with modern design and seamless user experience.",
+        coverImageUrl: "/media/agency-projects/hoz-beauty.png",
+        blogPostUrl: "https://hozbeauty.com",
+        githubUrl: "https://hozbeauty.com",
+        liveUrl: "https://hozbeauty.com"
+    },
+    {
+        title: "LaPraiz Edibles",
+        tagLine: "Web Design & Development",
+        description: "A professional website for an edibles brand with engaging design and functionality.",
+        coverImageUrl: "/media/agency-projects/la-praiz-edibles.png",
+        blogPostUrl: "https://lapraizedibles.com",
+        githubUrl: "https://lapraizedibles.com",
+        liveUrl: "https://lapraizedibles.com"
+    },
+    {
+        title: "BizConnect24",
+        tagLine: "Web Design",
+        description: "A business networking platform with clean design and intuitive user interface.",
+        coverImageUrl: "/media/agency-projects/bizconnect.png",
+        blogPostUrl: "https://bizconnect24.com",
+        githubUrl: "https://bizconnect24.com",
+        liveUrl: "https://bizconnect24.com"
+    },
+    {
         title: "Vybaa",
         tagLine: "Habit Tracking • Collaboration",
         description: "Vybaa is the ultimate social streak app that turns habit building into a team sport. Create streaks, invite friends, and achieve your goals together.",
@@ -84,7 +129,6 @@ export const myProjects = [
         githubUrl: "https://vybaa.app",
         liveUrl: "https://vybaa.app"
     },
-
     {
         title: "StreekApp",
         tagLine: "Habit Tracking • Self Growth",
@@ -94,7 +138,6 @@ export const myProjects = [
         githubUrl: "https://streekapp.vercel.app",
         liveUrl: "https://streekapp.vercel.app"
     },
-
     {
         title: "Ventt.io",
         tagLine: "Mental Health • Companionship",

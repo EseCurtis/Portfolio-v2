@@ -41,7 +41,7 @@ export function ProjectListCard({
 
         <div className="px-3">
           <header className="flex justify-between items-center  pb-1">
-            <h3 className="text-xl font-mona-sans-exp font-bold">{title}</h3>
+            <h3 className="text-md font-mona-sans-exp whitespace-nowrap font-bold">{title}</h3>
 
             <div className="flex w-full items-center justify-end gap-2 text-sm">
               <span className="font-mona-sans-exp font-semibold borsder-2 rounded-lg  py-1  bosrder-white">

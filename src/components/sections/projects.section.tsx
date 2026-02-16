@@ -29,6 +29,7 @@ export function ProjectsSection() {
             blogPostUrl={item.blogPostUrl}
             githubUrl={item.githubUrl}
             liveUrl={item.liveUrl}
+
           />
         ))}
       </div>
