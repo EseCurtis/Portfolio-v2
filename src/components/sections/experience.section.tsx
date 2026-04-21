@@ -22,6 +22,7 @@ function Experiences() {
             <ExperienceListItem
               key={experience.title}
               title={experience.title}
+              url={experience.url}
               role={experience.role}
               duration={experience.duration}
               description={experience.description}

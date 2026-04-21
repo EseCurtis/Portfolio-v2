@@ -15,10 +15,48 @@ export const mySkills = [
     "Figma",
     "Photoshop",
     "WordPress",
-    "Backend Development"
+    "Backend Development",
+    "AI Engineering Mastery"
 ];
 
 export const myExperience = [
+    {
+        title: "Shopant (shopant.io)",
+        url: "https://shopant.io",
+        role: "Fullstack Developer",
+        duration: "2026",
+        description: `
+            Built an end-to-end AI shopping assistant platform for Shopify stores from the ground up.<br/>
+            Developed responsive frontend interfaces with React and Next.js, with a strong focus on performance optimization and user experience.<br/>
+            Designed and implemented backend architecture using Node.js, Express, and PostgreSQL for scalable data management.<br/>
+            Integrated AI-powered product recommendations and checkout guidance features that increased conversion rates by 20-35%.<br/>
+            Implemented RESTful APIs for seamless communication between frontend and backend services.<br/>
+            Reduced cart abandonment by 40-55% through instant question answering and guided checkout flows.
+        `
+    },
+    {
+        title: "BizConnect24 (bizconnect24.com)",
+        url: "https://bizconnect24.com",
+        role: "Fullstack Developer",
+        duration: "2025",
+        description: `
+            Led frontend development and web performance optimization initiatives.<br/>
+            Debugged and resolved UI issues to enhance user experience.<br/>
+            Served as an AI subject matter expert, developing innovative features including AI-powered virtual try-on functionality.
+        `
+    },
+    {
+        title: "Get MUVN (getmuvn.app)",
+        url: "https://getmuvn.app",
+        role: "Mobile Engineer",
+        duration: "2024",
+        description: `
+            Built and maintained a React Native app (iOS/Android) with fast, reusable UI components and Context API state management.<br/>
+            Integrated APIs and services including authentication, push notifications, offline support, and secure data sync.<br/>
+            Implemented CI/CD pipelines using Fastlane and Bitrise for automated deployment.<br/>
+            Optimized app performance and ensured cross-platform compatibility.
+        `
+    },
     {
         title: "Think Bloom Tech",
         role: "Frontend Engineer",
@@ -34,47 +72,43 @@ export const myExperience = [
         role: "Frontend Engineer",
         duration: "2021 - 2023",
         description: `
-            Collaborated in a team of 5 to integrate and manage third-party plugins and services.<br/>
-            Developed and delivered fast-paced projects, ensuring all deliverables were completed on time.<br/>
-            Utilized a range of technologies and tools to support front-end and back-end development.
+            Collaborated with a 5-person team to integrate and manage third-party APIs, plugins, and external services.<br/>
+            Delivered projects in fast-paced environments while maintaining quality standards and meeting tight deadlines.<br/>
+            Leveraged modern full-stack technologies across frontend and backend to build robust applications.
         `
     },
     {
         title: "Zerouxstudio",
-        role: "Fullstack Engineer",
+        role: "Fullstack Developer",
         duration: "2023 - 2024",
         description: `
-            Ensured the architecture and overall application design met high standards for performance, security, and scalability.<br/>
-            Integrated third-party APIs and services, ensuring seamless functionality and data flow.<br/>
-            Utilized modern development practices, including CI/CD, automated testing, and version control with Git.<br/>
-            Worked on and tested automation services to handle customized user flows, improving efficiency and reliability.
-        `
-    },
-
-    {
-        title: "Get MUVN",
-        role: "Frontend Mobile Engineer",
-        duration: "2024",
-        description: `
-        Built and maintained Get MUVN React Native app (iOS/Android) with fast, reusable UI components and Context API state management.<br/>
-        Integrated APIs & services (auth, push notifications) with offline support and secure data sync.<br/>
-        Implemented CI/CD (Fastlane/Bitrise), automated testing (Jest/Detox), and Git workflows.<br/>
-        Collaborated in Agile team to deliver high-quality features rapidly.
-    `
-    },
-    {
-        title: "BizConnect24",
-        role: "Fullstack Engineer",
-        duration: "2025",
-        description: `
-            Worked mainly on the frontend and web optimizations,<br/>
-            Fixing ui bugs and errors.<br/>
-            Worked as AI  expert while producing innovative features like Ai Try Ons
+            Designed and maintained application architecture with focus on performance optimization, security best practices, and scalability.<br/>
+            Integrated third-party APIs and services to enable seamless data flow and enhanced platform functionality.<br/>
+            Implemented modern development workflows including CI/CD pipelines, automated testing, and Git-based version control.<br/>
+            Built and tested automation services for customized user workflows, increasing operational efficiency and system reliability.
         `
     },
 ]
 
 export const myProjects = [
+    {
+        title: "Shopant",
+        tagLine: "AI Shopping Assistant",
+        description: "An AI shopping assistant for Shopify stores that helps customers discover products, get instant answers, and move through checkout with confidence.",
+        coverImageUrl: "/media/projects/shopant.png",
+        blogPostUrl: "https://shopant.io",
+        githubUrl: "",
+        liveUrl: "https://shopant.io"
+    },
+    {
+        title: "Bllaze",
+        tagLine: "AI-Native Product Management",
+        description: "Bllaze turns raw ideas into execution instantly, generating PRDs, features, timelines, coding prompts, and launch assets in seconds.",
+        coverImageUrl: "/media/projects/bllaze.png",
+        blogPostUrl: "https://bllaze.space",
+        githubUrl: "",
+        liveUrl: "https://bllaze.space"
+    },
     {
         title: "Get MUVN",
         tagLine: "Web Development",
