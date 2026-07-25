@@ -1,32 +1,15 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import "@fontsource-variable/dm-sans";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"]
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"]
-});
-
-const monaSans = localFont({
-  src: "../public/fonts/dribble-mona-sans.woff2",
-  variable: "--font-mona-sans",
-  display: "swap"
-});
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#000000" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" }
+    { media: "(prefers-color-scheme: light)", color: "#fbfaf6" },
+    { media: "(prefers-color-scheme: dark)", color: "#121411" }
   ]
 };
 
@@ -187,8 +170,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "const theme=localStorage.getItem('portfolio-theme');if(theme==='light'||theme==='dark'){document.documentElement.dataset.theme=theme}"
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -198,10 +187,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${monaSans.variable} antialiased bg-background  `}
-        id="main-body"
-      >
+      <body className="antialiased" id="main-body">
         {children}
         <Analytics />
       </body>

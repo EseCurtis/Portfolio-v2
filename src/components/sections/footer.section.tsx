@@ -1,11 +1,3 @@
-export function FooterSection() {
-  return (
-    <div className="bg-gray-700 p-3  relative w-full px-mg mt-[70px]">
-      <div className="flex items-center z-10 relative justify-between gap-2">
-        <span>
-          &copy; Ese Curtis • <b>2022 - {new Date().getFullYear()}</b>
-        </span>
-      </div>
-    </div>
-  );
+export function FooterSection(): React.JSX.Element {
+  return <footer className="flex items-center justify-between border-t border-[var(--line)] pt-7 font-mono text-[10px] tracking-[.08em] text-[var(--faint)]"><span>Ese Curtis · Résumé</span><span>{new Date().getFullYear()}</span></footer>;
 }

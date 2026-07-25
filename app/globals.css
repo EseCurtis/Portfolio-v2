@@ -1,54 +1,241 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1d1e20;
-  --foreground: #ededed;
-
-  --mg-x: 24px;
-
+  --paper: #fbfaf6;
+  --ink: #171816;
+  --muted: #72756f;
+  --faint: #a6a8a2;
+  --line: #d9dad4;
+  --accent: #344b3d;
+  --surface-muted: #f0efe9;
+  --focus: #315c46;
+  --button-ink: #fbfaf6;
+  --grain-blend: multiply;
+  --font-body: "DM Sans Variable", "DM Sans", sans-serif;
+  --font-code: "DM Sans Variable", "DM Sans", sans-serif;
+  color-scheme: light;
 }
 
-@theme {
-  --breakpoint-sm: 640px;
+:root[data-theme="dark"] {
+  --paper: #121411;
+  --ink: #edeee8;
+  --muted: #aeb2a9;
+  --faint: #777d74;
+  --line: #353a34;
+  --accent: #a9c4a9;
+  --surface-muted: #1d211c;
+  --focus: #bed8bf;
+  --button-ink: #121411;
+  --grain-blend: screen;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --paper: #121411;
+    --ink: #edeee8;
+    --muted: #aeb2a9;
+    --faint: #777d74;
+    --line: #353a34;
+    --accent: #a9c4a9;
+    --surface-muted: #1d211c;
+    --focus: #bed8bf;
+    --button-ink: #121411;
+    --grain-blend: screen;
+    color-scheme: dark;
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-mona-sans: var(--font-mona-sans);
-  --spacing-mg: 50px;
-  --spacing-05-mg: 25px;
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-code);
 }
 
-@utility font-mona-sans-exp {
-  font-family: var(--font-mona-sans);
-  font-stretch: expanded;
-  font-stretch: expanded;
-  line-height: 1.08;
-  -webkit-font-feature-settings: normal;
-  font-feature-settings: normal;
-}
-
-@utility mg-x {
-  padding-inline: 50px;
-}
-
-html,
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: auto;
-  /* disables momentum scroll bouncing */
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+a, button {
+  touch-action: manipulation;
+}
+a {
+  text-underline-offset: 3px;
+}
+button {
+  cursor: pointer;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+::selection { background: #dfe8d5; color: var(--ink); }
 
+.resume-page {
+  margin-inline: auto;
+  max-width: 960px;
+  min-height: 100svh;
+  padding: 64px 56px 40px;
+  position: relative;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+body::before {
+  background-image: url("/media/framernoise.png");
+  background-repeat: repeat;
+  background-size: 210px;
+  content: "";
+  inset: 0;
+  mix-blend-mode: var(--grain-blend);
+  opacity: .035;
+  pointer-events: none;
+  position: fixed;
+  z-index: 20;
+}
 
+.section-label {
+  color: var(--faint);
+  font-family: var(--font-code);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
 
+.section-heading {
+  padding-bottom: 14px;
+  position: relative;
+}
+
+.section-heading::after {
+  background: var(--line);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 44px;
+}
+
+.name-accent {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.06em;
+}
+
+.resume-link { color: var(--muted); transition: color 160ms ease; }
+.resume-link:hover { color: var(--accent); }
+.skill-pill {
+  background: var(--surface-muted);
+  border-radius: 3px;
+  padding: 8px 10px;
+}
+.primary-action { background: var(--ink); color: var(--button-ink); }
+.primary-action,
+.secondary-action {
+  align-items: center;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 7px;
+  justify-content: center;
+  letter-spacing: .06em;
+  min-height: 44px;
+  padding: 0 14px;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+.secondary-action {
+  border: 1px solid var(--line);
+}
+.secondary-action:hover {
+  border-color: var(--ink);
+}
+
+.theme-switch {
+  border: 1px solid var(--line);
+  display: inline-flex;
+  font-family: var(--font-code);
+  gap: 0;
+  padding: 0;
+}
+
+.theme-choice {
+  align-items: center;
+  color: var(--faint);
+  display: inline-flex;
+  font-size: 11px;
+  gap: 5px;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 9px;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+:root:not([data-theme]) .theme-choice-auto,
+:root[data-theme="light"] .theme-choice-light,
+:root[data-theme="dark"] .theme-choice-dark {
+  background: var(--ink);
+  color: var(--button-ink);
+}
+
+.skip-link {
+  background: var(--ink);
+  color: var(--button-ink);
+  left: 16px;
+  padding: 12px 16px;
+  position: fixed;
+  top: 16px;
+  transform: translateY(-160%);
+  transition: transform 180ms ease;
+  z-index: 100;
+}
+.skip-link:focus { transform: translateY(0); }
+
+@media (max-width: 700px) {
+  .resume-page { padding: 32px 20px 24px; }
+  .theme-choice span { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media print {
+  @page { margin: 12mm; size: A4; }
+  :root,
+  :root[data-theme="dark"] {
+    --paper: #ffffff;
+    --ink: #161713;
+    --muted: #555852;
+    --faint: #747870;
+    --line: #d9dad4;
+    --accent: #344b3d;
+    --surface-muted: #f2f2ed;
+    color-scheme: light;
+  }
+  body {
+    background: white;
+    print-color-adjust: exact;
+  }
+  .resume-page { max-width: none; padding: 0; }
+  body::before { opacity: .025; }
+  .screen-actions,
+  .skip-link { display: none !important; }
+  article,
+  #skills section { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
 }

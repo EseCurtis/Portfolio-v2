@@ -1,42 +1,96 @@
-import {
-  contactsUrl
-} from "@/src/utils/shared/constants.util.shared";
-import { Instagram, Mail, Phone, Twitter } from "lucide-react";
-import Link from "next/link";
+const skillGroups: Array<{ label: string; skills: string[] }> = [
+  { label: "Languages", skills: ["JavaScript", "TypeScript", "PHP", "Bash"] },
+  {
+    label: "Frontend",
+    skills: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Query",
+      "React Router"
+    ]
+  },
+  {
+    label: "Mobile",
+    skills: ["React Native", "Expo", "Push / FCM", "OAuth 2.0"]
+  },
+  {
+    label: "Backend",
+    skills: [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "Socket.IO",
+      "RabbitMQ",
+      "JWT Auth"
+    ]
+  },
+  {
+    label: "Databases",
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Prisma"]
+  },
+  {
+    label: "AI & Automation",
+    skills: ["OpenAI API", "LangChain", "AI Agents", "MCP Servers", "Puppeteer"]
+  },
+  {
+    label: "Integrations",
+    skills: [
+      "WhatsApp API",
+      "Instagram Graph",
+      "TikTok API",
+      "Twitter / X API",
+      "Facebook API",
+      "Telegram API",
+      "Stripe"
+    ]
+  },
+  {
+    label: "Infra & DevOps",
+    skills: [
+      "Docker",
+      "Kubernetes (k3s)",
+      "MinIO / S3",
+      "Cloudflare",
+      "Git / GitHub",
+      "Linux"
+    ]
+  },
+  {
+    label: "Security",
+    skills: [
+      "Penetration Testing",
+      "Exploit / PoC Dev",
+      "Vulnerability Analysis",
+      "Security Auditing"
+    ]
+  }
+];
 
-export function CTASection() {
+export function CTASection(): React.JSX.Element {
   return (
-    <div className="z-10  w-full flex flex-col items-center justify-center py-[20vh] max-sm:pb-mg">
-      <h3 className="text-4xl font-mona-sans-exp font-bold text-center max-sm:text-5xl max-sm:w-full">
-        Do You Have Any Ideas?
-      </h3>
-      <p className="text-center max-sm:px-mg max-sm:text-white/70">
-        Whether you’re creating something new or improving what you already
-        have, <br />I can help elevate your product experience. Don’t hesitate
-        to get in touch.
-      </p>
-
-      <div className=" gap-7 flex items-center mt-mg max-sm:flex-col">
-        <Link href={contactsUrl.email} className="flex gap-3 items-center hover:underline">
-          <Mail size={17} />
-          <span className="font-mona-sans-exp">curtisese52@gmail.com</span>
-        </Link>
-        <span className="max-sm:hidden">•</span>
-        <Link href={contactsUrl.phone} className="flex gap-3 items-center hover:underline">
-          <Phone size={17} />
-          <span className="font-mona-sans-exp">+234 81 360 468 62</span>
-        </Link>
-        <span className="max-sm:hidden">•</span>
-        <div className="flex gap-7">
-          <Link href={contactsUrl.instagram} className="hover:opacity-70">
-            <Instagram size={24} />
-          </Link>
-          <span>•</span>
-          <Link href={contactsUrl.twitter} className="hover:opacity-70">
-            <Twitter size={24} />
-          </Link>
-        </div>
+    <section className="pb-12" id="skills">
+      <h2 className="section-label section-heading">Skills</h2>
+      <div className="grid grid-cols-1 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+        {skillGroups.map((group) => (
+          <section className="py-6" key={group.label}>
+            <h3 className="section-label text-[var(--accent)]">
+              {group.label}
+            </h3>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <li
+                  className="skill-pill text-xs text-[var(--muted)]"
+                  key={skill}
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
