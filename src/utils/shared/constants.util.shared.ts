@@ -95,10 +95,28 @@ export const myProjects = [
         title: "Shopant",
         tagLine: "AI Shopping Assistant",
         description: "An AI shopping assistant for Shopify stores that helps customers discover products, get instant answers, and move through checkout with confidence.",
-        coverImageUrl: "/media/projects/shopant.png",
+        coverImageUrl: "/media/site-captures/shopant-fullpage.png",
         blogPostUrl: "https://shopant.io",
         githubUrl: "",
         liveUrl: "https://shopant.io"
+    },
+    {
+        title: "Vybaa",
+        tagLine: "Product Design • Mobile App",
+        description: "A social self-growth app that turns goals, reflections, and daily check-ins into a rhythm you can actually keep.",
+        coverImageUrl: "/media/site-captures/vybaa-fullpage.png",
+        blogPostUrl: "https://vybaa.app",
+        githubUrl: "",
+        liveUrl: "https://vybaa.app"
+    },
+    {
+        title: "Curtiis",
+        tagLine: "Creative Development • Web Design",
+        description: "A warm, editorial web experience designed to make a creative practice feel tactile, human, and memorable.",
+        coverImageUrl: "/media/site-captures/curtiis-fullpage.png",
+        blogPostUrl: "https://curtiis.com",
+        githubUrl: "",
+        liveUrl: "https://curtiis.com"
     },
     {
         title: "Bllaze",

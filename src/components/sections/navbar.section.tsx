@@ -14,7 +14,7 @@ export function NavbarSection(): React.JSX.Element {
         <p className="mt-2 text-xs font-bold tracking-[.12em] text-[var(--muted)]">
           SOFTWARE ENGINEER &amp; PRODUCT BUILDER
         </p>
-        <p className="mt-2 text-xs text-[var(--faint)]">aka EseSzn</p>
+        <p className="mt-2 text-xs text-[var(--faint)]">aka EseSzn • EMILOKAN</p>
       </div>
 
       <div className="flex flex-col items-start gap-1.5 text-xs text-[var(--muted)] sm:items-end">
@@ -24,7 +24,7 @@ export function NavbarSection(): React.JSX.Element {
         <Link className="resume-link" href={contactsUrl.email}>
           curtisese52@gmail.com
         </Link>
-        <span>Lagos, Nigeria · Remote</span>
+        <span>Nigeria · Remote</span>
         <Link className="resume-link" href={contactsUrl.github} target="_blank">
           github.com/EseCurtis
         </Link>
