@@ -119,6 +119,15 @@ export const myProjects = [
         liveUrl: "https://curtiis.com"
     },
     {
+        title: "Tplex Brand",
+        tagLine: "Brand Studio • Creative Direction",
+        description: "An Abuja-based brand studio website built around bold identities, campaign thinking, and clear visual systems that make good ideas impossible to miss.",
+        coverImageUrl: "/media/site-captures/tplex-fullpage.png",
+        blogPostUrl: "https://the-tplex-brand.vercel.app",
+        githubUrl: "",
+        liveUrl: "https://the-tplex-brand.vercel.app"
+    },
+    {
         title: "Bllaze",
         tagLine: "AI-Native Product Management",
         description: "Bllaze turns raw ideas into execution instantly, generating PRDs, features, timelines, coding prompts, and launch assets in seconds.",
