@@ -7,6 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const featuredProjects = myProjects.slice(0, 6);
+const leadProject =
+  myProjects.find((project) => project.title === "Tplex Brand") ?? myProjects[0];
+const projectQueue = [
+  leadProject,
+  ...featuredProjects.filter((project) => project.title !== leadProject.title)
+];
+const supportingProjects = projectQueue.slice(1, 3);
+const archiveProjects = projectQueue.slice(3);
 const services = [
   [
     "01",
@@ -24,6 +32,64 @@ const services = [
     "Practical AI features, automations, and agents that remove friction from real workflows."
   ]
 ];
+
+type Project = (typeof myProjects)[number];
+
+type ProjectCardProps = {
+  project: Project;
+  projectNumber: number;
+  variant: "compact" | "lead";
+};
+
+function ProjectCard({
+  project,
+  projectNumber,
+  variant
+}: ProjectCardProps): React.JSX.Element {
+  const projectNumberLabel = String(projectNumber).padStart(2, "0");
+
+  return (
+    <a
+      className={`project-card project-card--${variant}`}
+      href={project.liveUrl}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <div className="project-image-wrap">
+        <Image
+          alt={project.title}
+          className="project-image"
+          fill
+          sizes={
+            variant === "lead"
+              ? "(max-width: 700px) 100vw, 65vw"
+              : "(max-width: 700px) 100vw, 35vw"
+          }
+          src={project.coverImageUrl}
+        />
+        <span className="project-image-label">
+          {variant === "lead" ? "Featured project" : project.tagLine}
+        </span>
+        <span className="project-image-arrow" aria-hidden="true">
+          <ArrowUpRight size={18} />
+        </span>
+      </div>
+      <div className="project-card-caption">
+        <div className="project-card-heading">
+          <p className="project-index">{projectNumberLabel}</p>
+          <h3>{project.title}</h3>
+        </div>
+        <p className="project-card-tag">{project.tagLine}</p>
+        {variant === "lead" ? (
+          <p className="project-card-description">{project.description}</p>
+        ) : null}
+        <span className="project-card-link">
+          Visit live <MoveUpRight aria-hidden="true" size={16} />
+        </span>
+      </div>
+    </a>
+  );
+}
 
 export default function Home(): React.JSX.Element {
   return (
@@ -106,39 +172,63 @@ export default function Home(): React.JSX.Element {
       <section className="work-section" id="work">
         <div className="section-topline">
           <p className="eyebrow">02 / Selected work</p>
-          <span>2019 — 2026</span>
+          <span>06 projects / 2019 — 2026</span>
         </div>
-        <div className="project-grid">
-          {featuredProjects.map((project, index) => (
-            <a
-              className={`project-card project-card-${index + 1}`}
-              href={project.liveUrl}
-              key={project.title}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="project-image-wrap">
-                <Image
-                  alt={project.title}
-                  className="project-image"
-                  fill
-                  sizes="(max-width: 700px) 100vw, 50vw"
-                  src={project.coverImageUrl}
-                />
-              </div>
-              <div className="project-meta">
+        <div className="work-intro">
+          <h2>
+            Work with
+            <br />
+            <em>a point of view.</em>
+          </h2>
+          <p>
+            A closer look at the products, brand systems, and digital
+            experiences I have helped shape from first idea to live release.
+          </p>
+        </div>
+        <div className="work-showcase">
+          <ProjectCard project={leadProject} projectNumber={1} variant="lead" />
+          <div className="project-support">
+            {supportingProjects.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                projectNumber={index + 2}
+                variant="compact"
+              />
+            ))}
+          </div>
+        </div>
+        <div className="project-archive">
+          <div className="project-archive-heading">
+            <span>More in the archive</span>
+            <span>03 — 06</span>
+          </div>
+          <div className="project-index-list">
+            {archiveProjects.map((project, index) => (
+              <a
+                className="project-index-row"
+                href={project.liveUrl}
+                key={project.title}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span className="project-index-row-number">
+                  {String(index + 4).padStart(2, "0")}
+                </span>
                 <div>
-                  <p className="project-index">0{index + 1}</p>
-                  <h2>{project.title}</h2>
+                  <h3>{project.title}</h3>
+                  <p>{project.tagLine}</p>
                 </div>
-                <p>{project.tagLine}</p>
-                <MoveUpRight className="project-arrow" size={20} />
-              </div>
-            </a>
-          ))}
+                <p className="project-index-row-description">
+                  {project.description}
+                </p>
+                <MoveUpRight aria-hidden="true" size={18} />
+              </a>
+            ))}
+          </div>
         </div>
         <Link className="text-link" href="/cv#projects">
-          See the full archive <ArrowUpRight size={16} />
+          See the full résumé archive <ArrowUpRight size={16} />
         </Link>
       </section>
       <section className="process-section">
