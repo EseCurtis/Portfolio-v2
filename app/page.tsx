@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const featuredProjects = myProjects.slice(0, 6);
 const leadProject =
-  myProjects.find((project) => project.title === "Tplex Brand") ?? myProjects[0];
+  myProjects.find((project) => project.title === "Vybaa") ?? myProjects[0];
 const projectQueue = [
   leadProject,
   ...featuredProjects.filter((project) => project.title !== leadProject.title)
@@ -58,7 +58,7 @@ function ProjectCard({
       <div className="project-image-wrap">
         <Image
           alt={project.title}
-          className="project-image"
+          className="project-image !object-top"
           fill
           sizes={
             variant === "lead"

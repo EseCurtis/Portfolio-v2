@@ -104,7 +104,7 @@ export const myProjects = [
         title: "Vybaa",
         tagLine: "Product Design • Mobile App",
         description: "A social self-growth app that turns goals, reflections, and daily check-ins into a rhythm you can actually keep.",
-        coverImageUrl: "/media/site-captures/vybaa-fullpage.png",
+        coverImageUrl: "/media/site-captures/vybaa-hero.png",
         blogPostUrl: "https://vybaa.app",
         githubUrl: "",
         liveUrl: "https://vybaa.app"
@@ -185,7 +185,7 @@ export const myProjects = [
         title: "Vybaa",
         tagLine: "Habit Tracking • Collaboration",
         description: "Vybaa is the ultimate social streak app that turns habit building into a team sport. Create streaks, invite friends, and achieve your goals together.",
-        coverImageUrl: "/media/projects/vybaa.png",
+        coverImageUrl: "/media/site-captures/vybaa-hero.png",
         blogPostUrl: "https://vybaa.app",
         githubUrl: "https://vybaa.app",
         liveUrl: "https://vybaa.app"
